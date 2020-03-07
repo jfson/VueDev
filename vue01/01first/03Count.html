@@ -15,11 +15,13 @@
 </div>
 <body>
     <script>
+
+        const obj = {
+            count : 0
+        }
         const app = new Vue({
             el:'#app',
-            data:{
-                count : 0
-            },
+            data:obj,
             methods:{
                 add:function () {
                     this.count++
