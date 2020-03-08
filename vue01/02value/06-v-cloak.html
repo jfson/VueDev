@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        [v-cloak]{ //包含v-cloak时，不展示
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="app" v-cloak>
+    //v-cloak 等待js执行完成后，才会渲染view
+    {{message}}
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:'#app',
+        data:{
+            message:'Hello~'
+        }
+    })
+
+</script>
+</body>
+</html>
