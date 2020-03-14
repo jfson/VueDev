@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="item in message" >{{item}}</li>
+    </ul>
+
+    <nav-bar bgc="white"></nav-bar>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:'#app',
+        data:{
+            message:['海贼王1','海贼王2','海贼王3','海贼王4','海贼王5','海贼王6','海贼王7']
+        }
+    })
+
+</script>
+
+</body>
+</html>
