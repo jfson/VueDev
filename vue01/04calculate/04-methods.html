@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+<!--    1. 直接拼接-->
+   <h2 > {{firstName}}{{secondName}} </h2>
+<!--    2.通过定义methods-->
+   <h2 > {{getFullName()}} </h2>
+<!--    3.通过computed(相比较getFullName()来说，只会计算一次)-->
+   <h2 > {{fullName()}} </h2>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:'#app',
+        data:{
+            message:'Hello~',
+            firstName:'Jfosn',
+            secondName:'Sun',
+        },
+        computed:{
+            fullName:function () {
+                return this.firstName + this.secondName
+            }
+        },
+        methods:{
+            getFullName:function () {
+                return this.firstName + this.secondName
+            }
+        }
+    })
+
+</script>
+</body>
+</html>
