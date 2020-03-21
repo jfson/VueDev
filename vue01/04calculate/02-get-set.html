@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{message}}
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:'#app',
+        data:{
+            message:'Hello~',
+            firstName:'Jfson',
+            secondName:'Sun',
+        },
+        computed:{
+            // fullName:function () {
+            //     return this.firstName + ' ' + this.secondName
+            // }
+
+            fullName: {
+                // get:function(){
+                //     return this.firstName + ' ' + this.secondName
+                // },
+                //计算属性：只读属性，一般不写set
+                // set:function (newName) {
+                //     const sp = newName.split(' ');
+                //     this.firstName  = sp[0];
+                //     this.secondName  = sp[1];
+                // }
+            },
+
+            fullName:function () {
+                //默认是计算属性的get()
+                return this.firstName + ' ' + this.secondName
+            }
+        }
+    })
+
+</script>
+
+</body>
+</html>
