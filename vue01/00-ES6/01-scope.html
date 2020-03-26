@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //1.变量作用域,块外能访问
+        {
+            var name = 'why';
+            console.log(name);
+        }
+        console.log(name);
+
+        //2.没有块级作用域引起啥问题
+        var func;
+        if (true){
+            abc = 'why';
+
+            func = function () {
+                console.log(name);
+            }
+        }
+
+
+    </script>
+</body>
+</html>
